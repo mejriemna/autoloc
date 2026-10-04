@@ -19,4 +19,8 @@ public class Employe {
     private String prenom;
     @Enumerated(EnumType.STRING)
     private RoleEmploye roleEmploye;
+
+    @ManyToOne
+    @JoinColumn(name = "id_agence")
+    private Agence agence;
 }

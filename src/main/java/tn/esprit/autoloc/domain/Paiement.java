@@ -21,4 +21,8 @@ public class Paiement {
     LocalDate datePaiement;
     @Enumerated(EnumType.STRING)
     ModePaiement modePaiement;
+
+    @ManyToOne
+    @JoinColumn(name = "id_contrat")
+    private Contrat contrat;
 }
